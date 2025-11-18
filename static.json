@@ -1,6 +1,6 @@
 {
-  "root": "public",
   "routes": {
     "/": "html/nomis.html"
   }
 }
+
