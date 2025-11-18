@@ -1,0 +1,184 @@
+/* ---- General Page Styling (MONOCHROME UPDATE) ---- */
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    /* Monochrome gradient */
+    background: linear-gradient(135deg, #e0e0e0, #cccccc, #999999);
+    background-size: 400% 400%;
+    animation: gradientMove 10s ease infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: #333; /* Dark gray for general text */
+}
+
+.main-s {
+    animation: gradientMove 10s ease infinite;
+    color: #fff; /* White text for contrast against dark elements */
+    text-align: center;
+    border-radius: 20px;
+    margin: 40px auto;
+    max-width: 1200px;
+}
+
+/* Gradient animation (Monochrome adjusted) */
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ---- Auth Card (MONOCHROME UPDATE) ---- */
+.auth-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+}
+
+.auth-card {
+    background: rgba(255, 255, 255, 0.95); /* Slightly transparent white card */
+    border-radius: 20px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Darker shadow for depth */
+    padding: 40px 30px;
+    text-align: center;
+    animation: fadeIn 0.8s ease;
+    backdrop-filter: blur(5px); /* Subtle blur for glass effect */
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Light border */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.auth-card h2 {
+    color: #1a1a1a; /* Dark gray for headings */
+    margin-bottom: 10px;
+}
+
+.auth-card p {
+    color: #444444; /* Medium gray for descriptions */
+    font-size: 0.95rem;
+    margin-bottom: 30px;
+}
+
+/* ---- Input Groups (MONOCHROME UPDATE) ---- */
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group i {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    color: #666666; /* Gray icons */
+}
+
+.input-group input {
+    width: 80%;
+    padding: 12px 12px 12px 38px;
+    border: 1.5px solid #cccccc; /* Light gray border */
+    border-radius: 25px;
+    outline: none;
+    font-size: 0.95rem;
+    transition: 0.3s;
+    background-color: #f9f9f9; /* Off-white input background */
+    color: #333;
+}
+
+.input-group input:focus {
+    border-color: #666666; /* Darker gray on focus */
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); /* Darkened shadow on focus */
+}
+
+/* ---- Buttons (MONOCHROME UPDATE) ---- */
+.auth-btn {
+    width: 100%;
+    background: linear-gradient(135deg, #333333, #000000); /* Black gradient button */
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.auth-btn:hover {
+    background: linear-gradient(135deg, #555555, #222222); /* Slightly lighter on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* ---- Text Links (MONOCHROME UPDATE) ---- */
+.switch-text {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #333; /* Dark gray for general text */
+    font-weight: 500; /* Adjusted font weight */
+}
+
+.switch-text a {
+    color: #1a1a1a; /* Black link text */
+    font-weight: 700;
+    text-decoration: underline; /* Underline for clarity */
+}
+
+.switch-text a:hover {
+    color: #666666; /* Darker gray on hover */
+}
+
+/* ---- Responsive (UNCHANGED) ---- */
+@media (max-width: 480px) {
+    .auth-card {
+        padding: 30px 20px;
+    }
+
+    .auth-card h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* ---- Header Logo (MONOCHROME UPDATE) ---- */
+.auth-header {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #1a1a1a; /* Dark gray for header text */
+    font-size: 24px; /* Adjusted font size for logo */
+    font-weight: 700;
+}
+
+.auth-header .logo .material-symbols-outlined {
+    font-size: 30px; /* Larger icon */
+    color: #000000; /* Black icon */
+}
+
+/* This part of the logo had a color accent, now monochrome */
+.auth-header .logo .accent {
+    color: #333333; /* Dark gray for the "Market" part */
+}
+
+/* Responsive (UNCHANGED) */
+@media (max-width: 480px) {
+    .auth-header {
+        top: 15px;
+        left: 20px;
+    }
+
+    .auth-header .logo {
+        font-size: 1.1rem;
+    }
+
+    .auth-header .logo .material-symbols-outlined {
+        font-size: 1.3rem;
+    }
+}

@@ -1,0 +1,395 @@
+/* =========================================================
+   1. Variables & Global Reset (Monochromatic Theme)
+   ========================================================= */
+:root {
+    /* Monochromatic Palette */
+    --white: #ffffff;
+    --black: #000000;
+    --dark-grey: #1f2937; /* Used for main text/buttons */
+    --light-grey: #e5e7eb; /* Used for borders/backgrounds */
+    --shadow-color: rgba(0, 0, 0, 0.08);
+
+    /* Clean, Simple Styles */
+    --border-radius-pill: 999px;
+    --border-radius-md: 12px;
+    --shadow: 0 5px 15px var(--shadow-color);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    background-color: var(--light-grey);
+    color: var(--dark-grey);
+    min-height: 100vh;
+}
+
+/* =========================================================
+   2. Header Section (Pill Shape, Glassmorphism, Responsive)
+   ========================================================= */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    margin: 10px auto;
+    max-width: 1400px;
+    
+    /* Modern Glass Look */
+    border-radius: var(--border-radius-pill);
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: var(--shadow);
+
+    position: sticky;
+    top: 10px;
+    z-index: 1000;
+}
+
+.logo h1 {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    color: var(--black);
+    gap: 8px;
+    font-weight: 700;
+}
+
+.nav {
+    flex-grow: 1;
+    max-width: 500px;
+}
+
+.nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.icon_order a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--dark-grey);
+    transition: color 0.3s;
+}
+
+.icon_order .material-symbols-outlined {
+    font-size: 24px;
+    margin-bottom: 4px;
+}
+
+.icon_order .icon_text {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.icon_order:hover a {
+    color: var(--black);
+}
+
+.login ul {
+    display: flex;
+    gap: 10px;
+}
+
+.sign_btn {
+    background: var(--dark-grey);
+    padding: 8px 18px;
+    color: var(--white);
+    border-radius: var(--border-radius-pill);
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    border: 1px solid transparent;
+}
+
+.sign_btn:hover {
+    background: var(--black);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Error Message (Modernized) */
+.notFoundError {
+    background-color: #fca5a5; /* Light red/error color */
+    color: var(--dark-grey);
+    font-weight: 600;
+    font-size: 16px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 2000;
+    display: none;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* =========================================================
+   3. Detailed Product Container (Clean & Monochromatic)
+   ========================================================= */
+.Dproduct-container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 60px auto;
+    display: flex;
+    gap: 40px;
+    padding: 40px;
+    background: var(--white);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px var(--shadow-color);
+    animation: fadeIn 0.6s ease;
+    align-items: flex-start; /* Aligns top on desktop */
+}
+
+/* IMAGE */
+.Dproduct-image {
+    width: 50%;
+    flex-shrink: 0;
+}
+
+.Dproduct-image img {
+    width: 100%;
+    height: 450px; /* Consistent height for visual balance */
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px var(--shadow-color);
+}
+
+/* INFO */
+.Dproduct-info {
+    width: 50%;
+    padding: 10px 0;
+    text-align: left; /* Standard LTR alignment */
+}
+
+.Dproduct-title {
+    font-size: clamp(28px, 4vw, 38px);
+    font-weight: 800;
+    margin-bottom: 15px;
+    color: var(--black);
+    text-align: left;
+}
+
+.Dproduct-price {
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--dark-grey);
+    margin-bottom: 25px;
+    /* Use the same dark color for a sophisticated, unified look */
+}
+
+.Dproduct-description {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+/* QUANTITY & TOTAL BOXES */
+.quantity-box,
+.total-box {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.quantity-box-label {
+    color: var(--dark-grey);
+}
+
+.quantity-box-input {
+    width: 80px;
+    padding: 10px;
+    font-size: 18px;
+    border: 2px solid var(--light-grey);
+    border-radius: var(--border-radius-md);
+    text-align: center;
+    color: var(--dark-grey);
+    background-color: var(--white);
+}
+
+.total-box span {
+    font-weight: 700;
+    color: var(--black);
+}
+
+/* BUTTONS */
+.buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.buttons button {
+    flex: 1;
+    padding: 15px 30px;
+    border-radius: var(--border-radius-pill);
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    min-width: 150px;
+}
+
+/* Add to Cart - Primary Accent (Black) */
+.btn-cart {
+    background: var(--black);
+    color: var(--white);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.btn-cart:hover {
+    background: var(--dark-grey);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+/* Buy Now - Secondary (White/Outline) */
+.btn-buy {
+    background: var(--white);
+    color: var(--dark-grey);
+    border: 2px solid var(--dark-grey);
+}
+
+.btn-buy:hover {
+    background: var(--dark-grey);
+    color: var(--white);
+    border-color: var(--dark-grey);
+}
+
+
+/* =========================================================
+   4. Responsiveness
+   ========================================================= */
+/* Tablet & Small Desktop (max 992px) */
+@media (max-width: 992px) {
+    header {
+        padding: 15px 25px;
+    }
+    .Dproduct-container {
+        width: 95%;
+        padding: 30px;
+        gap: 30px;
+    }
+    .Dproduct-image img {
+        height: 350px;
+    }
+}
+
+/* Mobile View (max 768px) */
+@media (max-width: 768px) {
+    /* Header Stacking */
+    header {
+        flex-direction: column;
+        padding: 15px 20px;
+        gap: 15px;
+        border-radius: 20px;
+    }
+
+    .nav {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .nav ul {
+        justify-content: space-around;
+    }
+
+    .login {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .login ul {
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    /* Detailed Product Stacking */
+    .Dproduct-container {
+        flex-direction: column;
+        padding: 25px;
+        margin: 30px auto;
+    }
+
+    .Dproduct-image, 
+    .Dproduct-info {
+        width: 100%;
+    }
+    
+    /* Center text elements for better flow on mobile */
+    .Dproduct-info {
+        text-align: center;
+        padding-top: 15px;
+    }
+
+    .Dproduct-title,
+    .Dproduct-description {
+        text-align: center;
+    }
+    
+    .quantity-box, 
+    .total-box,
+    .buttons {
+        justify-content: center;
+    }
+
+    .Dproduct-image img {
+        height: auto; /* Auto height on mobile */
+    }
+}
+/* Update the existing CSS for .quantity-box-label */
+
+.quantity-box-label {
+    /* Existing style: color: var(--dark-grey); */
+    
+    /* === New Styles to make it look like a button/border === */
+    display: inline-block; /* Allows padding and border */
+    padding: 8px 15px;
+    border: 2px solid var(--dark-grey);
+    border-radius: var(--border-radius-pill); /* Makes it pill-shaped */
+    font-weight: 600;
+    cursor: pointer; /* Indicates interactivity */
+    transition: all 0.3s ease;
+    
+    /* Ensure it remains aligned with the input field */
+    line-height: 1; 
+}
+
+/* === New Hover Effect === */
+.quantity-box-label:hover {
+    background: var(--dark-grey);
+    color: var(--white);
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+.notFoundError {
+    background-color: #eb9393;
+    color: white;
+    display: flex; /* Change from 'none' via JS usually, assuming default flex for now */
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    font-size: 18px;
+    font-weight: 600;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 2000;
+    display: none; /* Hidden by default */
+}

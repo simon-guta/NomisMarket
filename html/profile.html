@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile - NomisMarket</title>
+    <link rel="stylesheet" href="../css/profile.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Google Fonts for the website's style -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+  
+</head>
+<body>
+    
+    <!-- Header (Replicated from your main layout) -->
+    <header> 
+        <div class="logo"> 
+            <h1>
+                <span class="material-symbols-outlined">shopping_bag_speed</span>
+                NomisMarket
+            </h1>
+        </div>
+        <div class="nav"> 
+            <ul class="nav_list">
+                <li class="icon_order">
+                    <a href="nomis.html">
+                        <span class="material-symbols-outlined">home</span>
+                        <span class="icon_text">Home</span>
+                    </a>
+                </li>
+                <li class="icon_order">
+                    <a href="product.html">
+                        <span class="material-symbols-outlined">local_mall</span>
+                        <span class="icon_text">Product</span>
+                    </a>
+                </li>
+                <li class="icon_order">
+                    <a href="cart.html">
+                        <span class="material-symbols-outlined">add_shopping_cart</span>
+                        <span class="icon_text">Cart</span>
+                    </a>
+                </li>
+                <li class="icon_order">
+                    <a href="profile.html" class="active">
+                        <span class="material-symbols-outlined">account_circle</span>
+                        <span class="icon_text">Profile</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="login">
+            <ul>
+                <li><a href="signup.html" class="sign_btn">signup</a></li>
+                <li><a href="signin.html" class="sign_btn">signin</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Profile Dashboard Content -->
+    <div class="profile-container">
+
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="user-info">
+                <div class="avatar">JS</div>
+                <h2>John Smith</h2>
+                <p>john.s@example.com</p>
+            </div>
+            
+            <nav>
+                <a href="#" class="active">
+                    <span class="material-symbols-outlined">dashboard</span>
+                    Dashboard
+                </a>
+                <a href="#">
+                    <span class="material-symbols-outlined">shopping_basket</span>
+                    My Orders
+                </a>
+                <a href="#">
+                    <span class="material-symbols-outlined">credit_card</span>
+                    Payment Methods
+                </a>
+                <a href="#">
+                    <span class="material-symbols-outlined">settings</span>
+                    Account Settings
+                </a>
+                <a href="#" style="color: #dc2626; margin-top: 15px;">
+                    <span class="material-symbols-outlined">logout</span>
+                    Logout
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <h1>User Dashboard</h1>
+
+            <!-- Statistics Grid -->
+            <div class="stat-grid">
+                <div class="stat-card">
+                    <h3>Total Orders</h3>
+                    <p>12</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Pending Shipments</h3>
+                    <p>3</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Wallet Balance</h3>
+                    <p>$150.00</p>
+                </div>
+            </div>
+
+            <!-- Recent Orders Section -->
+            <div class="orders-section">
+                <h2>Recent Orders</h2>
+                
+                <table class="order-table">
+                    <thead>
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Date</th>
+                            <th>Total</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="Order ID">#90387</td>
+                            <td data-label="Date">2025-10-15</td>
+                            <td data-label="Total">$49.99</td>
+                            <td data-label="Status"><span class="status-badge delivered">Delivered</span></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Order ID">#90386</td>
+                            <td data-label="Date">2025-10-10</td>
+                            <td data-label="Total">$129.00</td>
+                            <td data-label="Status"><span class="status-badge delivered">Delivered</span></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Order ID">#90385</td>
+                            <td data-label="Date">2025-09-28</td>
+                            <td data-label="Total">$25.50</td>
+                            <td data-label="Status"><span class="status-badge pending">Pending</span></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Order ID">#90384</td>
+                            <td data-label="Date">2025-09-20</td>
+                            <td data-label="Total">$89.99</td>
+                            <td data-label="Status"><span class="status-badge delivered">Delivered</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </main>
+    </div>
+    
+</body>
+</html>
